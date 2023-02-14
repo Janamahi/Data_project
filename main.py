@@ -11,10 +11,10 @@ import pandas as pd
 
 @st.cache_data
 def get_data():
+  
   con = sqlite.connect("Fake_sales_data.db")
   data = pd.read_sql_query("SELECT * from SalesA", con)
   return data
-
 
 data = get_data()
 
